@@ -108,10 +108,4 @@
       address = #{address,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <select id="selectByName" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List"></include>
-    from user
-    where login_name = #{name, jdbcType=VARCHAR}
-  </select>
 </mapper>

@@ -1,4 +1,4 @@
-package com.horn.energy_blockchain.util;
+package com.horn.energy_blockchain.utils;
 
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;

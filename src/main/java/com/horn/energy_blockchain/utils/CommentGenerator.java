@@ -1,4 +1,4 @@
-package com.horn.energy_blockchain.util;
+package com.horn.energy_blockchain.utils;
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;
 import org.mybatis.generator.api.dom.java.Field;

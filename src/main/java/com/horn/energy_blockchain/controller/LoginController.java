@@ -1,13 +1,12 @@
 package com.horn.energy_blockchain.controller;
 
 import com.horn.energy_blockchain.entity.Login;
+import com.horn.energy_blockchain.entity.User;
 import com.horn.energy_blockchain.service.LoginService;
 import com.horn.energy_blockchain.common.Result;
+import com.horn.energy_blockchain.utils.PasswordUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class LoginController {
@@ -24,4 +23,17 @@ public class LoginController {
             return new Result(400, "登录失败", "");
         }
     }
+
+    @PostMapping( value = "/api/register")
+    @CrossOrigin
+    public Result register(@RequestBody User user){
+        try{
+
+            return loginService.register(user);
+        }catch (Exception e){
+            System.out.println("注册失败");
+            return new Result(400, "注册失败", "");
+        }
+    }
+
 }

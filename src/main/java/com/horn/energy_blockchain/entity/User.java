@@ -49,6 +49,15 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    public User(String loginName, String userName, String password, String sex, String email, String address) {
+        this.loginName = loginName;
+        this.userName = userName;
+        this.password = password;
+        this.sex = sex;
+        this.email = email;
+        this.address = address;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -74,6 +83,7 @@ public class User implements Serializable {
     }
 
     public String getPassword() {
+
         return password;
     }
 

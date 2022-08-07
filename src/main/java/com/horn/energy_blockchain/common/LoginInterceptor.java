@@ -1,7 +1,7 @@
 package com.horn.energy_blockchain.common;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.horn.energy_blockchain.util.HttpContextUtil;
+import com.horn.energy_blockchain.utils.HttpContextUtil;
 import org.apache.commons.lang3.StringUtils; //導入方法依賴的package包/類
 import org.springframework.web.servlet.HandlerInterceptor;
 
