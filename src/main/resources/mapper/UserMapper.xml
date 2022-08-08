@@ -114,4 +114,18 @@
     from user
     where login_name = #{name, jdbcType=VARCHAR}
   </select>
+
+  <select id="selectUserPage" resultMap="BaseResultMap">
+    select * from user
+    <where>
+      <if test="keyword != null and keyword != ''">
+        or login_name like CONCAT('%',#{keyword},'%')
+        or user_name like CONCAT('%',#{keyword},'%')
+        or email like CONCAT('%',#{keyword},'%')
+        or address like CONCAT('%',#{keyword},'%')
+      </if>
+    </where>
+  </select>
+
+
 </mapper>

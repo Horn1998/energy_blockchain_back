@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@MapperScan("cn.fighter3.mapper.*.mapper*")
+@MapperScan("com.horn.energy_blockchain.mapper")
 public class MybatisPlusConfig {
     @Bean
     public PaginationInterceptor paginationInterceptor() {

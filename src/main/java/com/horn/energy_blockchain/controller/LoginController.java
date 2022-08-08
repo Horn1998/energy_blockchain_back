@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class LoginController {
     @Autowired
-    LoginService loginService;
+    private LoginService loginService;
 
     @PostMapping(value = "/api/login")
     @CrossOrigin       //后端跨域
@@ -19,7 +19,7 @@ public class LoginController {
         try {
             return loginService.login(loginDTO);
         }catch (Exception e){
-            System.out.println("执行失败");
+            System.out.println(e.getMessage());
             return new Result(400, "登录失败", "");
         }
     }
@@ -31,7 +31,7 @@ public class LoginController {
 
             return loginService.register(user);
         }catch (Exception e){
-            System.out.println("注册失败");
+            System.out.println(e.getMessage());
             return new Result(400, "注册失败", "");
         }
     }
